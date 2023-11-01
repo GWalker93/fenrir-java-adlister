@@ -6,17 +6,14 @@
 <html>
 <head>
     <title><%= num > 19 %></title>
+
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
 
-    <h1>The current count is: <%= counter%></h1>
+<%@ include file="partials/navbar.jsp" %>
 
-<%--    <h1>Welcome To The Site!</h1>--%>
-<%--    <p>Path: <%= request.getRequestURL() %></p>--%>
-<%--    <p>Query String: <%= request.getQueryString() %></p>--%>
-<%--    <p>"name" parameter: <%= request.getParameter("name") %></p>--%>
-<%--    <p>"method" attribute: <%= request.getMethod() %></p>--%>
-<%--    <p>User-Agent header: <%= request.getHeader("user-agent") %></p>--%>
+    <h1>The current count is: <%= counter%></h1>
 
     <c:if test="<%= num == 20%>">
         <h1>Variable names should be very descriptive</h1>
@@ -31,5 +28,6 @@
         <h1>single letter variable names are good</h1>
     </c:if>
 
+<%@ include file="partials/scripts.jsp" %>
 </body>
 </html>
